@@ -23,7 +23,7 @@ export class Watson {
                     reject(err);
                 } else if (response) {
                     this.session_id = response.session_id;
-                    resolve();
+                    resolve(response);
                 }
             });
         });
