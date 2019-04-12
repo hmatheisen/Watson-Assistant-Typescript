@@ -46,7 +46,7 @@ export class Watson {
                 } else if (response) {
                     resolve(response);
                 }
-            })
-        })
+            });
+        });
     }
 }
