@@ -1,1 +1,1 @@
-export { Watson } from "./watson"
+export { Watson } from './watson';
