@@ -1,7 +1,8 @@
 import { assert, expect, should } from 'chai';
-import { Watson } from './watson'
 import { before, it } from 'mocha';
 import { config } from 'dotenv'
+
+import { Watson } from './watson'
 
 const assistant = new Watson();
 
@@ -36,7 +37,7 @@ describe('Watson', () => {
 
         it('should respond with a message', function() {
             this.timeout(5000)
-            return assistant.sendMessage("Hello There").then(response => {
+            return assistant.sendMessage('Hello There').then(response => {
                 expect(response.output.generic).to.be.an('array').that.is.not.empty
             });
         });

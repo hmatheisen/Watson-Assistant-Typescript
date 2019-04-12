@@ -1,7 +1,8 @@
-import express from "express";
-import bodyParser from "body-parser"
-import { Watson } from "./services";
-import { Message } from "./models";
+import bodyParser from 'body-parser';
+import express from 'express';
+
+import { Message } from './models';
+import { Watson } from './services';
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.post('/api/message', (req, res, next) => {
         .createSession()
         .then(() => assistant.sendMessage(body.input.text))
         .then(response => res.status(200).json(response))
-        .catch(next)
-})
+        .catch(next);
+});
 
 export default app;

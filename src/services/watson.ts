@@ -1,4 +1,4 @@
-import AssistantV2, { MessageParams, SessionResponse, CreateSessionParams, MessageResponse } from "ibm-watson/assistant/v2";
+import AssistantV2, { MessageParams, SessionResponse, CreateSessionParams, MessageResponse } from 'ibm-watson/assistant/v2';
 
 export class Watson {
     private assistant: AssistantV2;
@@ -15,7 +15,7 @@ export class Watson {
     createSession(): Promise<SessionResponse> {
         return new Promise((resolve, reject) => {
             const params: CreateSessionParams = {
-                assistant_id: process.env.ASSISTANT_ID || ""
+                assistant_id: process.env.ASSISTANT_ID || ''
             };
     
             this.assistant.createSession(params, (err, response: SessionResponse | undefined) => {
@@ -32,10 +32,10 @@ export class Watson {
     sendMessage(message: string): Promise<MessageResponse> {
         return new Promise((resolve, reject) => {
             const params: MessageParams = {
-                assistant_id: process.env.ASSISTANT_ID || "",
+                assistant_id: process.env.ASSISTANT_ID || '',
                 session_id: this.session_id,
                 input: {
-                    message_type: "text",
+                    message_type: 'text',
                     text: message
                 }
             }

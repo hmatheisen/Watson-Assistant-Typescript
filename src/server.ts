@@ -1,7 +1,9 @@
-import app from "./app"
-import { config } from "dotenv"
+import { config } from 'dotenv'
+
+import app from './app'
+
 config();
 
 app.listen(8080, () => {
-    console.log("Server is listening on port 8080");
+    console.log('Server is listening on port 8080');
 })
