@@ -2,7 +2,6 @@ import { assert, expect, should } from 'chai';
 import { Watson } from './watson'
 import { before, it } from 'mocha';
 import { config } from 'dotenv'
-import { resolveNs } from 'dns';
 
 const assistant = new Watson();
 
