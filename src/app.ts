@@ -9,8 +9,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+const assistant = new Watson();
+
 app.post('/api/message', (req, res, next) => {
-    const assistant = new Watson();
     const body: Message = req.body;
 
     assistant.createService()

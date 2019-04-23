@@ -1,15 +1,12 @@
-import AssistantV2, {
-    CreateSessionParams,
-    MessageParams,
-    MessageResponse,
-    SessionResponse,
-} from 'ibm-watson/assistant/v2';
+import AssistantV2, { CreateSessionParams, MessageParams, MessageResponse, SessionResponse } from 'ibm-watson/assistant/v2';
 
 export class Watson {
     private assistant: AssistantV2;
     private sessionId: string;
 
     public createService(): Watson {
+        if (this.assistant) { return this; }
+
         this.assistant = new AssistantV2({
             version: '2018-11-08',
         });
@@ -17,8 +14,10 @@ export class Watson {
         return this;
     }
 
-    public createSession(): Promise<SessionResponse> {
+    public createSession(): Promise<SessionResponse | void> {
         return new Promise((resolve, reject) => {
+            if (this.sessionId) { resolve(); }
+
             const params: CreateSessionParams = {
                 assistant_id: process.env.ASSISTANT_ID || '',
             };
