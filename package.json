@@ -1,5 +1,5 @@
 {
-  "name": "client-center-watson",
+  "name": "client-center",
   "version": "1.0.0",
   "description": "Demo of Watson Assistant using Node.js and Typescript for the IBM France Client Center",
   "main": "server.ts",
@@ -8,7 +8,8 @@
     "dev": "npm run build:live",
     "build": "tsc -p .",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
-    "test": "mocha -r ts-node/register src/**/*.test.ts"
+    "test": "mocha -r ts-node/register src/**/*.test.ts",
+    "clean": "rm -rf ./build"
   },
   "keywords": [
     "Watson",

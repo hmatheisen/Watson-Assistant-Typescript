@@ -5,8 +5,6 @@ export class Watson {
     private sessionId: string;
 
     public createService(): Watson {
-        if (this.assistant) { return this; }
-
         this.assistant = new AssistantV2({
             version: '2018-11-08',
         });
@@ -16,8 +14,6 @@ export class Watson {
 
     public createSession(): Promise<SessionResponse | void> {
         return new Promise((resolve, reject) => {
-            if (this.sessionId) { resolve(); }
-
             const params: CreateSessionParams = {
                 assistant_id: process.env.ASSISTANT_ID || '',
             };
