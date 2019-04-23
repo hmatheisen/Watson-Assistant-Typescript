@@ -3,7 +3,7 @@
 /* eslint no-unused-vars: "off" */
 /* global Api: true, Common: true, PayloadPanel: true*/
 
-var PayloadPanel = (function() {
+var PayloadPanel = (function () {
   var settings = {
     selectors: {
       payloadColumn: '#payload-column',
@@ -47,13 +47,13 @@ var PayloadPanel = (function() {
   // This causes the displayPayload function to be called when messages are sent / received
   function payloadUpdateSetup() {
     var currentRequestPayloadSetter = Api.setRequestPayload;
-    Api.setRequestPayload = function(newPayloadStr) {
+    Api.setRequestPayload = function (newPayloadStr) {
       currentRequestPayloadSetter.call(Api, newPayloadStr);
       displayPayload(settings.payloadTypes.request);
     };
 
     var currentResponsePayloadSetter = Api.setResponsePayload;
-    Api.setResponsePayload = function(newPayload) {
+    Api.setResponsePayload = function (newPayload) {
       currentResponsePayloadSetter.call(Api, newPayload);
       displayPayload(settings.payloadTypes.response);
     };
@@ -139,7 +139,7 @@ var PayloadPanel = (function() {
     convert = convert
       .replace(
         /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
-        function(match) {
+        function (match) {
           var cls = 'number';
           if (/^"/.test(match)) {
             if (/:$/.test(match)) {

@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <base href="/">
   <title>Watson Assistant Chat App</title>
@@ -6,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta property="og:image" content="conversation.svg" />
   <meta property="og:title" content="Conversation Chat Simple" />
-  <meta property="og:description" content="Sample application that shows how to use the Watson Assistant API to identify user intents" />
+  <meta property="og:description"
+    content="Sample application that shows how to use the Watson Assistant API to identify user intents" />
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="css/app.css">
-  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
 </head>
 
 <body>
@@ -23,8 +26,8 @@
         <div id="scrollingChat"></div>
         <p class="user-typing" id="user-typing-field"></p>
         <label for="textInput" class="inputOutline">
-          <input id="textInput" class="input responsive-column" placeholder="Type something" type="text" onkeydown="ConversationPanel.inputKeyDown(event, this)"
-            autofocus>
+          <input id="textInput" class="input responsive-column" placeholder="Type something" type="text"
+            onkeydown="ConversationPanel.inputKeyDown(event, this)" autofocus>
         </label>
         <div class="disclaimer">
           * This system is for demonstration purposes only and is not intended to process Personal Data. No Personal
@@ -49,6 +52,8 @@
   <script src="js/conversation.js"></script>
   <script src="js/payload.js"></script>
   <script src="js/global.js"></script>
-  <script type="text/javascript" src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js"></script>
 </body>
+
 </html>
