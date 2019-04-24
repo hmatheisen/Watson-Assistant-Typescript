@@ -1,7 +1,7 @@
 export interface Message {
-    input: Input;
+  input: Input;
 }
 
 interface Input {
-    text: string;
+  text: string;
 }
