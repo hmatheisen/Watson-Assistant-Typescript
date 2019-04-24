@@ -12,7 +12,7 @@ export class Watson {
     return this;
   }
 
-  public createSession(): Promise<SessionResponse | void> {
+  public createSession(): Promise<SessionResponse> {
     return new Promise((resolve, reject) => {
       const params: CreateSessionParams = {
         assistant_id: process.env.ASSISTANT_ID || '',
