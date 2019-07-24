@@ -80,7 +80,7 @@ var Api = (function () {
             ],
           }
         });
-      }
+      } 
     };
 
     var params = JSON.stringify(payloadToWatson);
