@@ -1,5 +1,3 @@
-#+OPTIONS: toc:2
-
 * Watson Assistant Typescript
 
   Demo of Watson Assistant using Node.js and Typescript for the IBM
