@@ -30,7 +30,7 @@
 
 ** Configuring the Server
 
-   - Create the =.env= file :
+   - Create the =.env= file:
 
    #+BEGIN_SRC bash
      mv .env.example .env
@@ -41,13 +41,13 @@
 ** Run Tests
 
    #+BEGIN_SRC bash
-     bash npm run test
+     npm run test
    #+END_SRC
 
 ** Run the server in development
 
    #+BEGIN_SRC bash
-     bash npm run dev
+     npm run dev
    #+END_SRC
 
 ** Run the server in production
@@ -55,11 +55,11 @@
    Build into Javascript :
 
    #+BEGIN_SRC bash
-     bash npm run build
+     npm run build
    #+END_SRC
 
    Run the compiled server :
 
    #+BEGIN_SRC bash
-     bash npm start
+     npm start
    #+END_SRC
