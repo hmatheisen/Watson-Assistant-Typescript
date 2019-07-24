@@ -30,7 +30,7 @@
 
 ** Configuring the Server
 
-   - Create the `.env` file :
+   - Create the =.env= file :
 
    #+BEGIN_SRC bash
      mv .env.example .env
