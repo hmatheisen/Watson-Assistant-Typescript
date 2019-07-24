@@ -1,7 +1,15 @@
+#+OPTIONS: toc:2
+
 * Watson Assistant Typescript
 
   Demo of Watson Assistant using Node.js and Typescript for the IBM
   France Client Center
+
+** Video
+
+   This code was made to create a [[file:video.mp4][video]] aimed at developers in IBM
+   France's Client Center. In this video we go through the creation of
+   a Node.js/Typescript server that uses Watson's Node.js SDK.
 
 ** Prerequisites
 
